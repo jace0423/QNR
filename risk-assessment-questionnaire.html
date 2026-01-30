@@ -282,13 +282,32 @@
           font-weight: bold;
           color: #1e3c72;
       }
+
+      /* 下載按鈕樣式 */
+      .download-btn {
+          width: 100%;
+          padding: 16px;
+          background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+          color: white;
+          border: none;
+          border-radius: 10px;
+          font-size: 16px;
+          font-weight: bold;
+          cursor: pointer;
+          transition: all 0.3s;
+          margin-bottom: 12px;
+      }
+
+      .download-btn:hover {
+          transform: translateY(-2px);
+          box-shadow: 0 10px 20px rgba(30, 60, 114, 0.3);
+      }
   </style>
 </head>
 <body>
   <div class="container">
       <div class="header">
           <h1>📊 投資人風險屬性評估問卷</h1>
-
           <p style="font-size: 13px; margin-top: 10px; opacity: 0.9;">本問卷評估您的財務能力、風險承受度、投資知識及行為紀律</p>
       </div>
       
@@ -304,47 +323,47 @@
               <div id="questionnaire">
                   <div class="section-title">
                       A. 財務承受能力
-                      <div class="section-subtitle">權重：35% | 評估您的財務基礎與資金穩定性</div>
+                      <div class="section-subtitle">權重:35% | 評估您的財務基礎與資金穩定性</div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">A1</span>
-                          <span>如果突然失業或沒收入，您的存款可以撐多久？</span>
+                          <span>如果突然失業或沒收入,您的存款可以撐多久?</span>
                       </div>
-                      <div class="question-hint">💡 不包含投資的錢，只算可以馬上用的現金或活存</div>
+                      <div class="question-hint">💡 不包含投資的錢,只算可以馬上用的現金或活存</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="a1" value="1" id="a1_1"><label for="a1_1">幾乎沒有存款，或不到1個月生活費</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="a1" value="1" id="a1_1"><label for="a1_1">幾乎沒有存款,或不到1個月生活費</label><span class="option-score">1分</span></div>
                           <div class="option"><input type="radio" name="a1" value="2" id="a1_2"><label for="a1_2">可以撐1-3個月</label><span class="option-score">2分</span></div>
                           <div class="option"><input type="radio" name="a1" value="3" id="a1_3"><label for="a1_3">可以撐3-6個月</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="a1" value="4" id="a1_4"><label for="a1_4">可以撐6個月以上，很有安全感</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="a1" value="4" id="a1_4"><label for="a1_4">可以撐6個月以上,很有安全感</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">A2</span>
-                          <span>未來一年內，您會需要把投資的錢拿出來用嗎？</span>
+                          <span>未來一年內,您會需要把投資的錢拿出來用嗎?</span>
                       </div>
-                      <div class="question-hint">💡 例如：買車、結婚、出國、繳學費等大筆支出</div>
+                      <div class="question-hint">💡 例如:買車、結婚、出國、繳學費等大筆支出</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="a2" value="1" id="a2_1"><label for="a2_1">隨時可能需要，不確定什麼時候要用</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="a2" value="1" id="a2_1"><label for="a2_1">隨時可能需要,不確定什麼時候要用</label><span class="option-score">1分</span></div>
                           <div class="option"><input type="radio" name="a2" value="2" id="a2_2"><label for="a2_2">今年內可能會用到</label><span class="option-score">2分</span></div>
                           <div class="option"><input type="radio" name="a2" value="3" id="a2_3"><label for="a2_3">1-3年內應該不會動用</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="a2" value="4" id="a2_4"><label for="a2_4">3年以上都不會用到，可以長期投資</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="a2" value="4" id="a2_4"><label for="a2_4">3年以上都不會用到,可以長期投資</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">A3</span>
-                          <span>您目前的負債（貸款、卡債）會影響生活嗎？</span>
+                          <span>您目前的負債(貸款、卡債)會影響生活嗎?</span>
                       </div>
-                      <div class="question-hint">💡 例如：房貸、車貸、學貸、信用卡分期等</div>
+                      <div class="question-hint">💡 例如:房貸、車貸、學貸、信用卡分期等</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="a3" value="1" id="a3_1"><label for="a3_1">負債很重，每月還款壓力很大，影響生活品質</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="a3" value="2" id="a3_2"><label for="a3_2">有貸款要還，每個月壓力不小</label><span class="option-score">2分</span></div>
-                          <div class="option"><input type="radio" name="a3" value="3" id="a3_3"><label for="a3_3">只有部分貸款，還款還算輕鬆</label><span class="option-score">3分</span></div>
+                          <div class="option"><input type="radio" name="a3" value="1" id="a3_1"><label for="a3_1">負債很重,每月還款壓力很大,影響生活品質</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="a3" value="2" id="a3_2"><label for="a3_2">有貸款要還,每個月壓力不小</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="a3" value="3" id="a3_3"><label for="a3_3">只有部分貸款,還款還算輕鬆</label><span class="option-score">3分</span></div>
                           <div class="option"><input type="radio" name="a3" value="4" id="a3_4"><label for="a3_4">完全沒有負債</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
@@ -352,7 +371,7 @@
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">A4</span>
-                          <span>您可以拿來投資的閒錢有多少？</span>
+                          <span>您可以拿來投資的閒錢有多少?</span>
                       </div>
                       <div class="question-hint">💡 包含存款、股票、基金等可投資資產</div>
                       <div class="options">
@@ -365,106 +384,106 @@
 
                   <div class="section-title">
                       B. 風險承受意願
-                      <div class="section-subtitle">權重：35% | 評估您對市場波動的心理承受力</div>
+                      <div class="section-subtitle">權重:35% | 評估您對市場波動的心理承受力</div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">B1</span>
-                          <span>假設您投資100萬，結果跌到剩80萬，您會怎麼做？</span>
+                          <span>假設您投資100萬,結果跌到剩80萬,您會怎麼做?</span>
                       </div>
                       <div class="question-hint">💡 這題測試您面對虧損時的真實反應</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="b1" value="1" id="b1_1"><label for="b1_1">太可怕了！馬上全部賣掉，不要再賠了</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="b1" value="2" id="b1_2"><label for="b1_2">先賣一半，觀望看看會不會繼續跌</label><span class="option-score">2分</span></div>
-                          <div class="option"><input type="radio" name="b1" value="3" id="b1_3"><label for="b1_3">不處理，繼續持有等回本</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="b1" value="4" id="b1_4"><label for="b1_4">正好便宜了！再加碼買進攤平成本</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="b1" value="1" id="b1_1"><label for="b1_1">太可怕了!馬上全部賣掉,不要再賠了</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="b1" value="2" id="b1_2"><label for="b1_2">先賣一半,觀望看看會不會繼續跌</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="b1" value="3" id="b1_3"><label for="b1_3">不處理,繼續持有等回本</label><span class="option-score">3分</span></div>
+                          <div class="option"><input type="radio" name="b1" value="4" id="b1_4"><label for="b1_4">正好便宜了!再加碼買進攤平成本</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">B2</span>
-                          <span>一年內，您最多可以接受虧損多少？</span>
+                          <span>一年內,您最多可以接受虧損多少?</span>
                       </div>
                       <div class="question-hint">💡 超過這個數字您就會睡不著覺</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="b2" value="1" id="b2_1"><label for="b2_1">最多虧5%，再多就受不了</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="b2" value="1" id="b2_1"><label for="b2_1">最多虧5%,再多就受不了</label><span class="option-score">1分</span></div>
                           <div class="option"><input type="radio" name="b2" value="2" id="b2_2"><label for="b2_2">可以接受虧5%-15%</label><span class="option-score">2分</span></div>
                           <div class="option"><input type="radio" name="b2" value="3" id="b2_3"><label for="b2_3">可以接受虧15%-30%</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="b2" value="4" id="b2_4"><label for="b2_4">虧30%以上也能承受，看長期</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="b2" value="4" id="b2_4"><label for="b2_4">虧30%以上也能承受,看長期</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">B3</span>
-                          <span>這筆錢您打算投資多久？</span>
+                          <span>這筆錢您打算投資多久?</span>
                       </div>
-                      <div class="question-hint">💡 投資時間越長，越能承受短期波動</div>
+                      <div class="question-hint">💡 投資時間越長,越能承受短期波動</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="b3" value="1" id="b3_1"><label for="b3_1">1年內就要用，短期投資</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="b3" value="2" id="b3_2"><label for="b3_2">1-3年，中短期規劃</label><span class="option-score">2分</span></div>
-                          <div class="option"><input type="radio" name="b3" value="3" id="b3_3"><label for="b3_3">3-7年，中長期投資</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="b3" value="4" id="b3_4"><label for="b3_4">7年以上，長期投資或退休規劃</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="b3" value="1" id="b3_1"><label for="b3_1">1年內就要用,短期投資</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="b3" value="2" id="b3_2"><label for="b3_2">1-3年,中短期規劃</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="b3" value="3" id="b3_3"><label for="b3_3">3-7年,中長期投資</label><span class="option-score">3分</span></div>
+                          <div class="option"><input type="radio" name="b3" value="4" id="b3_4"><label for="b3_4">7年以上,長期投資或退休規劃</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">B4</span>
-                          <span>投資時，您比較在意什麼？</span>
+                          <span>投資時,您比較在意什麼?</span>
                       </div>
-                      <div class="question-hint">💡 高報酬通常伴隨高風險，穩定收益則較安全</div>
+                      <div class="question-hint">💡 高報酬通常伴隨高風險,穩定收益則較安全</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="b4" value="1" id="b4_1"><label for="b4_1">絕對不能虧錢！保本最重要</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="b4" value="2" id="b4_2"><label for="b4_2">希望穩定小賺，不要大起大落</label><span class="option-score">2分</span></div>
-                          <div class="option"><input type="radio" name="b4" value="3" id="b4_3"><label for="b4_3">追求市場平均報酬就好，不貪心</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="b4" value="4" id="b4_4"><label for="b4_4">想賺更多！可以接受大波動</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="b4" value="1" id="b4_1"><label for="b4_1">絕對不能虧錢!保本最重要</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="b4" value="2" id="b4_2"><label for="b4_2">希望穩定小賺,不要大起大落</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="b4" value="3" id="b4_3"><label for="b4_3">追求市場平均報酬就好,不貪心</label><span class="option-score">3分</span></div>
+                          <div class="option"><input type="radio" name="b4" value="4" id="b4_4"><label for="b4_4">想賺更多!可以接受大波動</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">B5</span>
-                          <span>當股市連續大跌，新聞都在報崩盤，您的心情如何？</span>
+                          <span>當股市連續大跌,新聞都在報崩盤,您的心情如何?</span>
                       </div>
                       <div class="question-hint">💡 測試您的心理素質</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="b5" value="1" id="b5_1"><label for="b5_1">極度焦慮，整晚睡不著，一直想賣掉</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="b5" value="2" id="b5_2"><label for="b5_2">很擔心，一直看盤，心情很差</label><span class="option-score">2分</span></div>
-                          <div class="option"><input type="radio" name="b5" value="3" id="b5_3"><label for="b5_3">雖然不舒服，但還能忍住不亂動</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="b5" value="4" id="b5_4"><label for="b5_4">太好了！正是進場撿便宜的好機會</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="b5" value="1" id="b5_1"><label for="b5_1">極度焦慮,整晚睡不著,一直想賣掉</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="b5" value="2" id="b5_2"><label for="b5_2">很擔心,一直看盤,心情很差</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="b5" value="3" id="b5_3"><label for="b5_3">雖然不舒服,但還能忍住不亂動</label><span class="option-score">3分</span></div>
+                          <div class="option"><input type="radio" name="b5" value="4" id="b5_4"><label for="b5_4">太好了!正是進場撿便宜的好機會</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="section-title">
                       C. 知識與經驗
-                      <div class="section-subtitle">權重：20% | 評估您的投資專業程度</div>
+                      <div class="section-subtitle">權重:20% | 評估您的投資專業程度</div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">C1</span>
-                          <span>您投資股票、基金的經驗有多久？</span>
+                          <span>您投資股票、基金的經驗有多久?</span>
                       </div>
-                      <div class="question-hint">💡 經驗越豐富，對市場的理解越深</div>
+                      <div class="question-hint">💡 經驗越豐富,對市場的理解越深</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="c1" value="1" id="c1_1"><label for="c1_1">完全沒有經驗，剛開始學習</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="c1" value="2" id="c1_2"><label for="c1_2">1-3年，還在摸索階段</label><span class="option-score">2分</span></div>
-                          <div class="option"><input type="radio" name="c1" value="3" id="c1_3"><label for="c1_3">3-7年，有一定經驗</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="c1" value="4" id="c1_4"><label for="c1_4">7年以上，經驗豐富的老手</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="c1" value="1" id="c1_1"><label for="c1_1">完全沒有經驗,剛開始學習</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="c1" value="2" id="c1_2"><label for="c1_2">1-3年,還在摸索階段</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="c1" value="3" id="c1_3"><label for="c1_3">3-7年,有一定經驗</label><span class="option-score">3分</span></div>
+                          <div class="option"><input type="radio" name="c1" value="4" id="c1_4"><label for="c1_4">7年以上,經驗豐富的老手</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">C2</span>
-                          <span>您熟悉哪些投資工具？</span>
+                          <span>您熟悉哪些投資工具?</span>
                       </div>
                       <div class="question-hint">💡 選擇您真正了解、實際操作過的</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="c2" value="1" id="c2_1"><label for="c2_1">只有存款、定存，沒碰過其他投資</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="c2" value="1" id="c2_1"><label for="c2_1">只有存款、定存,沒碰過其他投資</label><span class="option-score">1分</span></div>
                           <div class="option"><input type="radio" name="c2" value="2" id="c2_2"><label for="c2_2">買過債券基金、配息基金</label><span class="option-score">2分</span></div>
                           <div class="option"><input type="radio" name="c2" value="3" id="c2_3"><label for="c2_3">會買賣股票、ETF</label><span class="option-score">3分</span></div>
                           <div class="option"><input type="radio" name="c2" value="4" id="c2_4"><label for="c2_4">連期貨、選擇權、槓桿商品都玩過</label><span class="option-score">4分</span></div>
@@ -474,54 +493,54 @@
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">C3</span>
-                          <span>對於投資專業術語，您的理解程度如何？</span>
+                          <span>對於投資專業術語,您的理解程度如何?</span>
                       </div>
-                      <div class="question-hint">💡 例如：資產配置、分散風險、再平衡、最大回撤、殖利率等</div>
+                      <div class="question-hint">💡 例如:資產配置、分散風險、再平衡、最大回撤、殖利率等</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="c3" value="1" id="c3_1"><label for="c3_1">完全看不懂，像外星文</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="c3" value="2" id="c3_2"><label for="c3_2">聽過這些詞，但不太清楚意思</label><span class="option-score">2分</span></div>
-                          <div class="option"><input type="radio" name="c3" value="3" id="c3_3"><label for="c3_3">大概知道意思，能理解基本概念</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="c3" value="4" id="c3_4"><label for="c3_4">很熟悉，能實際運用在投資決策上</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="c3" value="1" id="c3_1"><label for="c3_1">完全看不懂,像外星文</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="c3" value="2" id="c3_2"><label for="c3_2">聽過這些詞,但不太清楚意思</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="c3" value="3" id="c3_3"><label for="c3_3">大概知道意思,能理解基本概念</label><span class="option-score">3分</span></div>
+                          <div class="option"><input type="radio" name="c3" value="4" id="c3_4"><label for="c3_4">很熟悉,能實際運用在投資決策上</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">C4</span>
-                          <span>買投資商品前，您會看說明書或相關資料嗎？</span>
+                          <span>買投資商品前,您會看說明書或相關資料嗎?</span>
                       </div>
-                      <div class="question-hint">💡 例如：基金公開說明書、手續費、風險等級等</div>
+                      <div class="question-hint">💡 例如:基金公開說明書、手續費、風險等級等</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="c4" value="1" id="c4_1"><label for="c4_1">從來不看，太複雜了</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="c4" value="2" id="c4_2"><label for="c4_2">只看預期報酬率，其他跳過</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="c4" value="1" id="c4_1"><label for="c4_1">從來不看,太複雜了</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="c4" value="2" id="c4_2"><label for="c4_2">只看預期報酬率,其他跳過</label><span class="option-score">2分</span></div>
                           <div class="option"><input type="radio" name="c4" value="3" id="c4_3"><label for="c4_3">會看費用、風險說明等重點</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="c4" value="4" id="c4_4"><label for="c4_4">會仔細研讀公開說明書，了解所有細節</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="c4" value="4" id="c4_4"><label for="c4_4">會仔細研讀公開說明書,了解所有細節</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="section-title">
                       D. 行為與紀律
-                      <div class="section-subtitle">權重：10% | 評估您的投資決策品質</div>
+                      <div class="section-subtitle">權重:10% | 評估您的投資決策品質</div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">D1</span>
-                          <span>您有自己的投資計畫或規則嗎？能確實執行嗎？</span>
+                          <span>您有自己的投資計畫或規則嗎?能確實執行嗎?</span>
                       </div>
-                      <div class="question-hint">💡 例如：每月定期定額、設定停損停利、定期再平衡等</div>
+                      <div class="question-hint">💡 例如:每月定期定額、設定停損停利、定期再平衡等</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="d1" value="1" id="d1_1"><label for="d1_1">沒有任何計畫，都是看心情買賣</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="d1" value="2" id="d1_2"><label for="d1_2">有想法但常常做不到，容易半途而廢</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="d1" value="1" id="d1_1"><label for="d1_1">沒有任何計畫,都是看心情買賣</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="d1" value="2" id="d1_2"><label for="d1_2">有想法但常常做不到,容易半途而廢</label><span class="option-score">2分</span></div>
                           <div class="option"><input type="radio" name="d1" value="3" id="d1_3"><label for="d1_3">大致上會按照計畫執行</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="d1" value="4" id="d1_4"><label for="d1_4">有明確計畫並嚴格執行，紀律很好</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="d1" value="4" id="d1_4"><label for="d1_4">有明確計畫並嚴格執行,紀律很好</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">D2</span>
-                          <span>您做投資決策時，主要依據什麼？</span>
+                          <span>您做投資決策時,主要依據什麼?</span>
                       </div>
                       <div class="question-hint">💡 誠實回答您真實的決策方式</div>
                       <div class="options">
@@ -535,46 +554,46 @@
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">D3</span>
-                          <span>您多久調整一次投資組合（買賣股票/基金）？</span>
+                          <span>您多久調整一次投資組合(買賣股票/基金)?</span>
                       </div>
-                      <div class="question-hint">💡 交易越頻繁，手續費和稅金成本越高</div>
+                      <div class="question-hint">💡 交易越頻繁,手續費和稅金成本越高</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="d3" value="1" id="d3_1"><label for="d3_1">幾乎每週都在買賣，很頻繁</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="d3" value="1" id="d3_1"><label for="d3_1">幾乎每週都在買賣,很頻繁</label><span class="option-score">1分</span></div>
                           <div class="option"><input type="radio" name="d3" value="2" id="d3_2"><label for="d3_2">大概每個月調整一次</label><span class="option-score">2分</span></div>
-                          <div class="option"><input type="radio" name="d3" value="3" id="d3_3"><label for="d3_3">每季（3個月）檢視調整</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="d3" value="4" id="d3_4"><label for="d3_4">每年或更久才調整一次，長期持有</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="d3" value="3" id="d3_3"><label for="d3_3">每季(3個月)檢視調整</label><span class="option-score">3分</span></div>
+                          <div class="option"><input type="radio" name="d3" value="4" id="d3_4"><label for="d3_4">每年或更久才調整一次,長期持有</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">D4</span>
-                          <span>當您的投資策略和直覺感覺衝突時，您會？</span>
+                          <span>當您的投資策略和直覺感覺衝突時,您會?</span>
                       </div>
-                      <div class="question-hint">💡 例如：計畫要停損，但覺得會反彈；或計畫要加碼，但覺得會再跌</div>
+                      <div class="question-hint">💡 例如:計畫要停損,但覺得會反彈;或計畫要加碼,但覺得會再跌</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="d4" value="1" id="d4_1"><label for="d4_1">相信直覺，跟著感覺走</label><span class="option-score">1分</span></div>
-                          <div class="option"><input type="radio" name="d4" value="2" id="d4_2"><label for="d4_2">猶豫不決，不知道該怎麼辦</label><span class="option-score">2分</span></div>
+                          <div class="option"><input type="radio" name="d4" value="1" id="d4_1"><label for="d4_1">相信直覺,跟著感覺走</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="d4" value="2" id="d4_2"><label for="d4_2">猶豫不決,不知道該怎麼辦</label><span class="option-score">2分</span></div>
                           <div class="option"><input type="radio" name="d4" value="3" id="d4_3"><label for="d4_3">先問問專業人士的意見</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="d4" value="4" id="d4_4"><label for="d4_4">堅持原本的策略，不被情緒影響</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="d4" value="4" id="d4_4"><label for="d4_4">堅持原本的策略,不被情緒影響</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
                   <div class="question-block">
                       <div class="question-title">
                           <span class="question-number">D5</span>
-                          <span>您投資理財最主要的目標是什麼？</span>
+                          <span>您投資理財最主要的目標是什麼?</span>
                       </div>
                       <div class="question-hint">💡 不同目標適合不同的投資策略</div>
                       <div class="options">
-                          <div class="option"><input type="radio" name="d5" value="1" id="d5_1"><label for="d5_1">保住本金最重要，不要虧錢就好</label><span class="option-score">1分</span></div>
+                          <div class="option"><input type="radio" name="d5" value="1" id="d5_1"><label for="d5_1">保住本金最重要,不要虧錢就好</label><span class="option-score">1分</span></div>
                           <div class="option"><input type="radio" name="d5" value="2" id="d5_2"><label for="d5_2">希望有穩定的利息或配息收入</label><span class="option-score">2分</span></div>
-                          <div class="option"><input type="radio" name="d5" value="3" id="d5_3"><label for="d5_3">長期累積財富，穩健成長</label><span class="option-score">3分</span></div>
-                          <div class="option"><input type="radio" name="d5" value="4" id="d5_4"><label for="d5_4">追求資產快速翻倍，積極增值</label><span class="option-score">4分</span></div>
+                          <div class="option"><input type="radio" name="d5" value="3" id="d5_3"><label for="d5_3">長期累積財富,穩健成長</label><span class="option-score">3分</span></div>
+                          <div class="option"><input type="radio" name="d5" value="4" id="d5_4"><label for="d5_4">追求資產快速翻倍,積極增值</label><span class="option-score">4分</span></div>
                       </div>
                   </div>
 
-                  <button type="button" class="submit-btn" id="submitBtn">✨ 提交問卷，查看完整分析報告 ✨</button>
+                  <button type="button" class="submit-btn" id="submitBtn">✨ 提交問卷,查看完整分析報告 ✨</button>
               </div>
           </div>
 
@@ -609,7 +628,7 @@
               else ok = false;
           });
           
-          if (!ok) { alert('請回答所有問題後再提交！'); return; }
+          if (!ok) { alert('請回答所有問題後再提交!'); return; }
           
           const AR = A.a1+A.a2+A.a3+A.a4;
           const BR = A.b1+A.b2+A.b3+A.b4+A.b5;
@@ -624,16 +643,16 @@
           const W = [];
           
           if (A.a1===1||A.a2<=2) {
-              if (RC!=='R1'&&RC!=='R2') { RC='R2'; RL='R2 保守型'; W.push('⚠️ 流動性風險：緊急預備金不足'); }
+              if (RC!=='R1'&&RC!=='R2') { RC='R2'; RL='R2 保守型'; W.push('⚠️ 流動性風險:緊急預備金不足'); }
           }
           if (A.a3===1) {
-              if (RC!=='R1'&&RC!=='R2') { RC='R2'; RL='R2 保守型'; W.push('⚠️ 財務壓力：負債壓力較大'); }
+              if (RC!=='R1'&&RC!=='R2') { RC='R2'; RL='R2 保守型'; W.push('⚠️ 財務壓力:負債壓力較大'); }
           }
           if (A.c1<=2&&A.c3<=2) {
-              if (RC==='R4'||RC==='R5') { RC='R3'; RL='R3 穩健型'; W.push('⚠️ 投資知識：經驗不足'); }
+              if (RC==='R4'||RC==='R5') { RC='R3'; RL='R3 穩健型'; W.push('⚠️ 投資知識:經驗不足'); }
           }
           if (A.d1<=2&&A.b1<=2) {
-              if (RC!=='R1'&&RC!=='R2') { RC='R2'; RL='R2 保守型'; W.push('⚠️ 行為風險：易受情緒影響'); }
+              if (RC!=='R1'&&RC!=='R2') { RC='R2'; RL='R2 保守型'; W.push('⚠️ 行為風險:易受情緒影響'); }
           }
           
           const AT = [];
@@ -645,11 +664,11 @@
           if (AT.length===0) AT.push('一般投資人');
           
           const RD = {
-              'R1':{sr:'0-10%',br:'70-100%',rc:'0.8-1.2',t:'定存、貨幣基金、短期公債',a:'5%/25%/70%',d:'極度保守，以資本保全為首要目標'},
-              'R2':{sr:'10-25%',br:'50-80%',rc:'1.1-1.6',t:'投資等級債券、高股息ETF',a:'20%/60%/20%',d:'保守穩健，追求低波動下的穩定收益'},
-              'R3':{sr:'25-45%',br:'30-60%',rc:'1.5-2.2',t:'平衡型基金、全球分散股票ETF',a:'45%/45%/10%',d:'穩健平衡，追求長期穩定成長'},
-              'R4':{sr:'45-70%',br:'15-35%',rc:'2.0-3.0',t:'市值型ETF、科技/產業基金',a:'75%/20%/5%',d:'成長導向，追求較高報酬'},
-              'R5':{sr:'70-95%',br:'5-25%',rc:'2.8-4.0',t:'集中個股、新興市場、期權工具',a:'90%/5%/5%',d:'積極進取，追求最大化報酬'}
+              'R1':{sr:'0-10%',br:'70-100%',rc:'0.8-1.2',t:'定存、貨幣基金、短期公債',a:'5%/25%/70%',d:'極度保守,以資本保全為首要目標'},
+              'R2':{sr:'10-25%',br:'50-80%',rc:'1.1-1.6',t:'投資等級債券、高股息ETF',a:'20%/60%/20%',d:'保守穩健,追求低波動下的穩定收益'},
+              'R3':{sr:'25-45%',br:'30-60%',rc:'1.5-2.2',t:'平衡型基金、全球分散股票ETF',a:'45%/45%/10%',d:'穩健平衡,追求長期穩定成長'},
+              'R4':{sr:'45-70%',br:'15-35%',rc:'2.0-3.0',t:'市值型ETF、科技/產業基金',a:'75%/20%/5%',d:'成長導向,追求較高報酬'},
+              'R5':{sr:'70-95%',br:'5-25%',rc:'2.8-4.0',t:'集中個股、新興市場、期權工具',a:'90%/5%/5%',d:'積極進取,追求最大化報酬'}
           };
           
           const D = RD[RC];
@@ -664,7 +683,7 @@
           if (W.length>0) {
               H += `<div class="warning-box"><strong>⚠️ 風險控制提醒</strong>
                   ${W.map(w=>`<p>${w}</p>`).join('')}
-                  <p style="margin-top:10px">原始評分 ${ORC}，已調整為 ${RC}</p>
+                  <p style="margin-top:10px">原始評分 ${ORC},已調整為 ${RC}</p>
               </div>`;
           }
           
@@ -680,7 +699,7 @@
           <div class="result-section">
               <h3>🎯 ${RL} 特性</h3>
               <p>${D.d}</p>
-              <p style="margin-top:10px"><strong>商品報酬係數(RC)：</strong>${D.rc}</p>
+              <p style="margin-top:10px"><strong>商品報酬係數(RC):</strong>${D.rc}</p>
           </div>
           <div class="result-section">
               <h3>💼 建議資產配置</h3>
@@ -690,18 +709,65 @@
                   <tr><td>債券/固定收益</td><td><strong>${D.br}</strong></td><td>防禦型資產</td></tr>
                   <tr><td>現金/貨幣</td><td>依流動性需求</td><td>流動性管理</td></tr>
               </table>
-              <p style="margin-top:15px">參考配置（股/債/現）：<strong>${D.a}</strong></p>
+              <p style="margin-top:15px">參考配置(股/債/現):<strong>${D.a}</strong></p>
           </div>
           <div class="result-section">
               <h3>🛠️ 推薦投資工具</h3>
               <p>${D.t}</p>
-          </div>
-          <button class="restart-btn" onclick="location.reload()">🔄 重新填寫問卷</button>`;
+          </div>`;
+          
+          // 下載 HTML 按鈕
+          H += `<button class="download-btn" id="downloadHtmlBtn">💾 下載完整報告 (HTML)</button>`;
+          H += `<button class="restart-btn" onclick="location.reload()">🔄 重新填寫問卷</button>`;
           
           document.getElementById('result').innerHTML = H;
           document.getElementById('formWrapper').classList.add('hidden');
           document.getElementById('result').classList.add('show');
           window.scrollTo({top:0,behavior:'smooth'});
+          
+          // 下載 HTML 功能
+          const now = new Date();
+          const pad = n => String(n).padStart(2, '0');
+          const timestamp = `${now.getFullYear()}${pad(now.getMonth()+1)}${pad(now.getDate())}_${pad(now.getHours())}${pad(now.getMinutes())}`;
+
+          document.getElementById('downloadHtmlBtn').onclick = () => {
+            const styles = Array.from(document.querySelectorAll('style'))
+              .map(s => s.innerHTML)
+              .join('\n');
+            
+            const resultHtml = document.getElementById('result').innerHTML;
+            
+            const htmlDoc = `<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>風險屬性評估報告_${timestamp}</title>
+<style>${styles}</style>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>📊 投資人風險屬性評估報告</h1>
+    <p style="font-size: 13px; margin-top: 10px; opacity: 0.9;">下載時間: ${now.toLocaleString('zh-TW')}</p>
+  </div>
+  <div class="content">
+    ${resultHtml.replace(/<button[^>]*>.*?<\/button>/gs, '')}
+  </div>
+</div>
+</body>
+</html>`;
+            
+            const blob = new Blob([htmlDoc], { type: 'text/html;charset=utf-8' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = `風險屬性評估報告_${timestamp}.html`;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+          };
       };
   </script>
 </body>
